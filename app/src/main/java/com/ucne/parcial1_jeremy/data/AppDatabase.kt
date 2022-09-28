@@ -2,6 +2,7 @@ package com.ucne.parcial1_jeremy.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import com.ucne.parcial1_jeremy.data.dao.ArticuloDao
 import com.ucne.parcial1_jeremy.data.entity.Articulo
 
 @Database(
@@ -9,5 +10,7 @@ import com.ucne.parcial1_jeremy.data.entity.Articulo
     version = 3
 )
 abstract class AppDataBase : RoomDatabase(){
+
+    abstract val ArticuloDao: ArticuloDao
 
 }
