@@ -1,4 +1,4 @@
-package com.ucne.parcial1_jeremy.ui.AnonimaList
+package com.ucne.parcial1_jeremy.ui.ArticuloList
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -19,9 +19,9 @@ import com.ucne.parcial1_jeremy.data.entity.Articulo
 
 
 @Composable
-fun AnonimaListScreen(
+fun ArticuloListScreen(
     onClick: () -> Unit,
-    viewModel: AnonimaListViewModel = hiltViewModel()
+    viewModel: ArticuloListViewModel = hiltViewModel()
 ) {
 
     Scaffold(
@@ -50,7 +50,7 @@ fun AnonimaListScreen(
             .fillMaxWidth()
             .padding(it)) {
 
-            AnonimaLista(
+            ArticuloLista(
                 articulo = uiState.articulo,
                 modifier = Modifier
                     .fillMaxSize()
@@ -65,19 +65,19 @@ fun AnonimaListScreen(
 
 
 @Composable
-fun AnonimaLista(
+fun ArticuloLista(
     articulo: List<Articulo>,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(modifier = modifier) {
         items(articulo) { anonima ->
-            AnonimaRow(anonima)
+            ArticuloRow(anonima)
         }
     }
 }
 
 @Composable
-fun AnonimaRow(articulo: Articulo) {
+fun ArticuloRow(articulo: Articulo) {
     Column(
         modifier = Modifier
             .fillMaxWidth()

@@ -1,4 +1,4 @@
-package com.ucne.parcial1_jeremy.ui.Anonima
+package com.ucne.parcial1_jeremy.ui.Articulo
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue

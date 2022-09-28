@@ -13,8 +13,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.ucne.parcial1_jeremy.ui.Articulo.AnonimaScreen
-import com.ucne.parcial1_jeremy.ui.ArticuloList.AnonimaListScreen
+import com.ucne.parcial1_jeremy.ui.Articulo.ArticuloScreen
+import com.ucne.parcial1_jeremy.ui.ArticuloList.ArticuloListScreen
 import com.ucne.parcial1_jeremy.ui.theme.Parcial1_JeremyTheme
 import com.ucne.parcial1_jeremy.util.Screen
 import dagger.hilt.android.AndroidEntryPoint
@@ -35,12 +35,12 @@ class MainActivity : ComponentActivity() {
                     NavHost(navController = navController, startDestination = Screen.AnonimaListScreen.route)
                     {
                         composable(Screen.AnonimaListScreen.route){
-                            AnonimaListScreen(
+                            ArticuloListScreen(
                                 onClick = {navController.navigate(Screen.AnonimaScreen.route)}
                             )
                         }
                         composable(Screen.AnonimaScreen.route){
-                            AnonimaScreen({navController.navigateUp()})
+                            ArticuloScreen({navController.navigateUp()})
                         }
                     }
                 }

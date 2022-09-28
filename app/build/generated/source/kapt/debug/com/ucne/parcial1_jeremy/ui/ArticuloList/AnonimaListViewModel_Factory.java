@@ -15,7 +15,7 @@ import javax.inject.Provider;
     "unchecked",
     "rawtypes"
 })
-public final class AnonimaListViewModel_Factory implements Factory<AnonimaListViewModel> {
+public final class AnonimaListViewModel_Factory implements Factory<ArticuloListViewModel> {
   private final Provider<ArticuloRepository> repositoryProvider;
 
   public AnonimaListViewModel_Factory(Provider<ArticuloRepository> repositoryProvider) {
@@ -23,7 +23,7 @@ public final class AnonimaListViewModel_Factory implements Factory<AnonimaListVi
   }
 
   @Override
-  public AnonimaListViewModel get() {
+  public ArticuloListViewModel get() {
     return newInstance(repositoryProvider.get());
   }
 
@@ -32,7 +32,7 @@ public final class AnonimaListViewModel_Factory implements Factory<AnonimaListVi
     return new AnonimaListViewModel_Factory(repositoryProvider);
   }
 
-  public static AnonimaListViewModel newInstance(ArticuloRepository repository) {
-    return new AnonimaListViewModel(repository);
+  public static ArticuloListViewModel newInstance(ArticuloRepository repository) {
+    return new ArticuloListViewModel(repository);
   }
 }

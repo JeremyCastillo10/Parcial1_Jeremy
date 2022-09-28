@@ -12,19 +12,19 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-data class AnonimaListUiState(
+data class ArticuloListUiState(
     val articulo: List<Articulo> = emptyList(),
     val texto: String = "Meeting"
 )
 
 @HiltViewModel
-class AnonimaListViewModel @Inject constructor(
+class ArticuloListViewModel @Inject constructor(
     val repository: ArticuloRepository
 
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(AnonimaListUiState())
-    val uiState: StateFlow<AnonimaListUiState> = _uiState.asStateFlow()
+    private val _uiState = MutableStateFlow(ArticuloListUiState())
+    val uiState: StateFlow<ArticuloListUiState> = _uiState.asStateFlow()
 
     init {
         viewModelScope.launch {

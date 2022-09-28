@@ -15,7 +15,7 @@ import dagger.multibindings.StringKey;
 import java.lang.String;
 
 @OriginatingElement(
-    topLevelClass = AnonimaListViewModel.class
+    topLevelClass = ArticuloListViewModel.class
 )
 public final class AnonimaListViewModel_HiltModules {
   private AnonimaListViewModel_HiltModules() {
@@ -31,7 +31,7 @@ public final class AnonimaListViewModel_HiltModules {
     @IntoMap
     @StringKey("com.ucne.parcial1_jeremy.ui.AnonimaList.AnonimaListViewModel")
     @HiltViewModelMap
-    public abstract ViewModel binds(AnonimaListViewModel vm);
+    public abstract ViewModel binds(ArticuloListViewModel vm);
   }
 
   @Module
