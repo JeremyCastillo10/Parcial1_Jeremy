@@ -30,7 +30,7 @@ class AnonimaListViewModel @Inject constructor(
         viewModelScope.launch {
             repository.GetList().collect{list->
                 _uiState.update {
-                    it.copy()
+                    it.copy(articulo = list)
                 }
             }
 
