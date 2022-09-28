@@ -50,7 +50,7 @@ fun ArticuloScreen(
         floatingActionButton = {
             FloatingActionButton(onClick = {
                 if(viewModel.descripcion.length <=0 || viewModel.marca.length<=0
-                    ||viewModel.existencia.length<=0)
+                    ||viewModel.existencia.length<=0 ||viewModel.existencia.startsWith("0"))
                 {
                     nameError = viewModel.descripcion.isBlank()
                     nameError = viewModel.marca.isBlank()
@@ -99,9 +99,9 @@ fun ArticuloScreen(
                 label = { Text(text = "Existencia")},
                 value = viewModel.existencia,
                 onValueChange = {viewModel.existencia = it},
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal)
             )
-            if(viewModel.existencia.length <= 0)
+            if(viewModel.existencia.length <= 0 || viewModel.existencia.startsWith("0"))
             {
                 Text(text = ErrorText,
                     color= ErrorColor)
