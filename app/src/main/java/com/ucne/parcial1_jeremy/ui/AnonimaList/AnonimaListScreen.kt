@@ -83,7 +83,7 @@ fun AnonimaRow(articulo: Articulo) {
             .fillMaxWidth()
             .padding(4.dp)
     ) {
-        Text(text = "campoId${articulo.ArticuloId}",
+        Text(text = "campoId${articulo.articuloId}",
             style = TextStyle(fontFamily = FontFamily.Default),
             color = Color.White
         )
