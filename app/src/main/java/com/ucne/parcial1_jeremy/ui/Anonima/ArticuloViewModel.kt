@@ -7,9 +7,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ucne.parcial1_jeremy.data.entity.Articulo
 import com.ucne.parcial1_jeremy.repository.ArticuloRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+
+@HiltViewModel
 class ArticuloViewModel @Inject constructor(
     val repository: ArticuloRepository
 ):ViewModel() {
