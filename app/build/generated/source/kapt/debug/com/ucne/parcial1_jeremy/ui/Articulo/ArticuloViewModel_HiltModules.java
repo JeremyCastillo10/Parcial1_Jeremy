@@ -29,7 +29,7 @@ public final class ArticuloViewModel_HiltModules {
 
     @Binds
     @IntoMap
-    @StringKey("com.ucne.parcial1_jeremy.ui.Anonima.ArticuloViewModel")
+    @StringKey("com.ucne.parcial1_jeremy.ui.Articulo.ArticuloViewModel")
     @HiltViewModelMap
     public abstract ViewModel binds(ArticuloViewModel vm);
   }
@@ -44,7 +44,7 @@ public final class ArticuloViewModel_HiltModules {
     @IntoSet
     @HiltViewModelMap.KeySet
     public static String provide() {
-      return "com.ucne.parcial1_jeremy.ui.Anonima.ArticuloViewModel";
+      return "com.ucne.parcial1_jeremy.ui.Articulo.ArticuloViewModel";
     }
   }
 }

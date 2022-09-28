@@ -32,14 +32,14 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val navController = rememberNavController()
 
-                    NavHost(navController = navController, startDestination = Screen.AnonimaListScreen.route)
+                    NavHost(navController = navController, startDestination = Screen.ArticuloListScreen.route)
                     {
-                        composable(Screen.AnonimaListScreen.route){
+                        composable(Screen.ArticuloListScreen.route){
                             ArticuloListScreen(
-                                onClick = {navController.navigate(Screen.AnonimaScreen.route)}
+                                onClick = {navController.navigate(Screen.ArticuloScreen.route)}
                             )
                         }
-                        composable(Screen.AnonimaScreen.route){
+                        composable(Screen.ArticuloScreen.route){
                             ArticuloScreen({navController.navigateUp()})
                         }
                     }
