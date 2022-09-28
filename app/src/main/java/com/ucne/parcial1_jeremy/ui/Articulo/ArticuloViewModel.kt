@@ -33,4 +33,17 @@ class ArticuloViewModel @Inject constructor(
         }
     }
 
+    fun Update()
+    {
+        viewModelScope.launch {
+            repository.UpdateArticulo(
+                Articulo(
+                    descripcion = descripcion,
+                    marca = marca,
+                    existencia = existencia.toDouble()
+                )
+            )
+        }
+    }
+
 }
