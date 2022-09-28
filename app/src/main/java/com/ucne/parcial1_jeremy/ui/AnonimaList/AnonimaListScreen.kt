@@ -83,21 +83,21 @@ fun AnonimaRow(articulo: Articulo) {
             .fillMaxWidth()
             .padding(4.dp)
     ) {
-        Text(text = "campoId${articulo.articuloId}",
+        Text(text = "ArticuloId: ${articulo.articuloId}",
             style = TextStyle(fontFamily = FontFamily.Default),
-            color = Color.White
+            color = Color.Black
         )
-        Text(text = "campo1${articulo.descripcion}",
+        Text(text = "Descripcion: ${articulo.descripcion}",
             style = TextStyle(fontFamily = FontFamily.Default),
-            color = Color.White
+            color = Color.Black
         )
-        Text(text = "campo2${articulo.marca}",
+        Text(text = "Marca: ${articulo.marca}",
             style = TextStyle(fontFamily = FontFamily.Default),
-            color = Color.White
+            color = Color.Black
         )
-        Text(text = "campo3${articulo.existencia}",
+        Text(text = "Existencia: ${articulo.existencia}",
             style = TextStyle(fontFamily = FontFamily.Default),
-            color = Color.White
+            color = Color.Black
         )
         Divider(
             modifier = Modifier
