@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModel
 @Composable
 fun AnonimaScreen(
     onNavigateBack: () -> Unit,
+    viewModel: ArticuloViewModel = hiltViewModel()
 
     ) {
 
@@ -21,7 +22,7 @@ fun AnonimaScreen(
             TopAppBar(
                 title = {
                     Row{
-                        Text(text = "Registro")
+                        Text(text = "Registro de Articulos")
                         Spacer(Modifier.width(16.dp))
                     }
                 }
@@ -31,6 +32,7 @@ fun AnonimaScreen(
 
         floatingActionButton = {
             FloatingActionButton(onClick = {
+                viewModel.Save()
                 onNavigateBack()
             }) {
                 Icon(imageVector = Icons.Filled.Done, contentDescription = "Add")
@@ -43,6 +45,21 @@ fun AnonimaScreen(
                 .padding(it)
                 .padding(8.dp)
         ) {
+
+            OutlinedTextField(
+                label = { Text(text = "Descripcion")},
+                value = viewModel.descripcion,
+                onValueChange = {viewModel.descripcion = it})
+
+            OutlinedTextField(
+                label = { Text(text = "Marca")},
+                value = viewModel.marca,
+                onValueChange = {viewModel.marca = it})
+
+            OutlinedTextField(
+                label = { Text(text = "Existencia")},
+                value = viewModel.existencia,
+                onValueChange = {viewModel.existencia = it})
 
 
         }
