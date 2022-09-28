@@ -108,14 +108,6 @@ fun ArticuloScreen(
 
             }
 
-            Column() {
-                Button(onClick =
-                onNavigateBack) {
-                    Text(text = "Modificar")
-                }
-
-            }
-
 
         }
     }
