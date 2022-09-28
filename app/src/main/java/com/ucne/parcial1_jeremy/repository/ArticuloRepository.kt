@@ -11,5 +11,8 @@ class ArticuloRepository @Inject constructor(
         db.ArticuloDao.insertararticulo(articulo)
     }
 
+    suspend fun UpdateArticulo(articulo: Articulo){
+        db.ArticuloDao.updatearticulo(articulo)
+    }
     fun GetList() = db.ArticuloDao.getList()
 }
