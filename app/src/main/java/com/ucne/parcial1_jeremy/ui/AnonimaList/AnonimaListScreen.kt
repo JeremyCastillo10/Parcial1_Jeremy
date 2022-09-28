@@ -15,7 +15,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.ucne.parcial1_jeremy.data.entity.Anonima
+import com.ucne.parcial1_jeremy.data.entity.Articulo
 
 
 @Composable
@@ -51,7 +51,7 @@ fun AnonimaListScreen(
             .padding(it)) {
 
             AnonimaLista(
-                anonima = uiState.anonima,
+                articulo = uiState.articulo,
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(it)
@@ -66,36 +66,36 @@ fun AnonimaListScreen(
 
 @Composable
 fun AnonimaLista(
-    anonima: List<Anonima>,
+    articulo: List<Articulo>,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(modifier = modifier) {
-        items(anonima) { anonima ->
+        items(articulo) { anonima ->
             AnonimaRow(anonima)
         }
     }
 }
 
 @Composable
-fun AnonimaRow(anonima: Anonima) {
+fun AnonimaRow(articulo: Articulo) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(4.dp)
     ) {
-        Text(text = "campoId${anonima.campoId}",
+        Text(text = "campoId${articulo.ArticuloId}",
             style = TextStyle(fontFamily = FontFamily.Default),
             color = Color.White
         )
-        Text(text = "campo1${anonima.campo1}",
+        Text(text = "campo1${articulo.descripcion}",
             style = TextStyle(fontFamily = FontFamily.Default),
             color = Color.White
         )
-        Text(text = "campo2${anonima.campo2}",
+        Text(text = "campo2${articulo.marca}",
             style = TextStyle(fontFamily = FontFamily.Default),
             color = Color.White
         )
-        Text(text = "campo3${anonima.campo3}",
+        Text(text = "campo3${articulo.existencia}",
             style = TextStyle(fontFamily = FontFamily.Default),
             color = Color.White
         )
