@@ -1,4 +1,4 @@
-package com.ucne.parcial1_jeremy.ui.AnonimaList
+package com.ucne.parcial1_jeremy.ui.ArticuloList
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
