@@ -1,4 +1,4 @@
-package com.ucne.parcial1_jeremy.ui.Anonima
+package com.ucne.parcial1_jeremy.ui.Articulo
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
@@ -14,10 +14,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.ViewModel
 
 @Composable
-fun AnonimaScreen(
+fun ArticuloScreen(
     onNavigateBack: () -> Unit,
     viewModel: ArticuloViewModel = hiltViewModel()
 
