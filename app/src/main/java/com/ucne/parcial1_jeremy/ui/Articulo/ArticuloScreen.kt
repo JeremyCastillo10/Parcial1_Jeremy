@@ -17,6 +17,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
 fun ArticuloScreen(
+
     onNavigateBack: () -> Unit,
     viewModel: ArticuloViewModel = hiltViewModel()
 
@@ -107,6 +108,7 @@ fun ArticuloScreen(
                     color= ErrorColor)
 
             }
+
 
 
         }
