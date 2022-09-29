@@ -5,6 +5,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.ucne.parcial1_jeremy.data.dao.ArticuloDao
 import com.ucne.parcial1_jeremy.data.entity.Articulo
 import com.ucne.parcial1_jeremy.repository.ArticuloRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,6 +18,7 @@ import javax.inject.Inject
 class ArticuloViewModel @Inject constructor(
     val repository: ArticuloRepository
 ):ViewModel() {
+    /*var articuloId by mutableStateOf("")*/
     var descripcion by mutableStateOf("")
     var marca by mutableStateOf("")
     var existencia by mutableStateOf("")
@@ -33,17 +36,12 @@ class ArticuloViewModel @Inject constructor(
         }
     }
 
-    fun Update()
+    /*fun Update()
     {
         viewModelScope.launch {
-            repository.UpdateArticulo(
-                Articulo(
-                    descripcion = descripcion,
-                    marca = marca,
-                    existencia = existencia.toDouble()
-                )
-            )
+            var encontrado : Boolean = false
+            if(repository.Buscar(articuloId) == encontrado)
         }
-    }
+    }*/
 
 }
